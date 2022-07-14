@@ -66,6 +66,11 @@ else if(curlocal.indexOf('picxiaobai.com')>0||curlocal.indexOf('fkw.com')>0){
     document.querySelector('#clearMarkEntrance').remove()
 
 }
+else if(curlocal.indexOf('logomaker.com.cn')>0){
+    
+    var a=document.querySelectorAll(".watermark");for(n=0;n<a.length;n++){a[n].style.display="none"};
+ 
+}
 `
 document.getElementById('test').addEventListener('click', function () {
     executeScriptToCurrentTab(codes)
