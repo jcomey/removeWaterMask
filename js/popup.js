@@ -45,7 +45,7 @@ document.querySelector(".image-watermark,.eqc-watermark").style.background="none
  
 }
 else if(curlocal.indexOf('gaoding.com')>0||curlocal.indexOf('tubangzhu.com')>0){
-    var style=document.createElement("style");style.innerHTML=".editor-watermark,.water-mark-wrap{position:static;z-index:-999}";document.body.prepend(style);document.querySelector(".remove-watermark").style.display="none";
+    var style=document.createElement("style");style.innerHTML=".editor-watermark,.water-mark-wrap{position:static;z-index:-999;background-image:none;opacity:0;visibility:hidden !important;}";document.body.prepend(style);document.querySelector(".remove-watermark").style.display="none";
 }
 else if(curlocal.indexOf('818ps.com')>0||curlocal.indexOf('maka.im')>0){
     document.querySelector(".fixedWaterMaskButton,.poster-editor-watermark").style.display="none"
