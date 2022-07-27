@@ -40,7 +40,7 @@ function executeScriptToCurrentTab(code) {
 
 var codes = `var curlocal=window.location.host;
 if(curlocal.indexOf('tusij.com')>0||curlocal.indexOf('eqxiu.com')>0){
-
+    var style=document.createElement("style");style.innerHTML=".image-watermark,.eqc-watermark{width:0;height:0;position:static;z-index:-999;background-image:none;opacity:0;visibility:hidden !important;}";document.body.prepend(style);document.querySelector(".fixedWaterMaskButton").style.display="none";
 document.querySelector(".image-watermark,.eqc-watermark").style.background="none";
  
 }
