@@ -27,6 +27,7 @@ function sendMessageToContentScript(message, callback) {
         });
     });
 }
+
 // 向content-script注入JS片段
 function executeScriptToCurrentTab(code) {
     // MutationObserver = function () { }
@@ -37,8 +38,35 @@ function executeScriptToCurrentTab(code) {
     });
 }
 
+var co = `
+html2canvas(document.querySelector(".editor-canvas"),{  useCORS: true,allowTaint: true}).then(canvas => {
 
-var codes = `var curlocal=window.location.host;
+    const imgData = canvas.toDataURL("image/png", 1.0);
+    console.log(imgData);
+    const img=new Image();
+     
+    img.src=imgData;
+    
+
+const newWin = window.open('', '_blank')
+newWin.document.write(img.outerHTML)
+newWin.document.title = 'download'
+newWin.document.close()
+  //  document.body.prepend(img)
+})
+ `
+document.getElementById('do').addEventListener('click', function () {
+
+    executeScriptToCurrentTab(co)
+})
+
+
+
+
+var codes = `
+
+
+var curlocal=window.location.host;
 if(curlocal.indexOf('tusij.com')>0||curlocal.indexOf('eqxiu.com')>0){
     var style=document.createElement("style");style.innerHTML=".image-watermark,.eqc-watermark{width:0;height:0;position:static;z-index:-999;background-image:none;opacity:0;visibility:hidden !important;}";document.body.prepend(style);document.querySelector(".fixedWaterMaskButton").style.display="none";
 document.querySelector(".image-watermark,.eqc-watermark").style.background="none";

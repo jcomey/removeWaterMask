@@ -22,7 +22,8 @@
                 "<all_urls>"
             ],
             "js": [
-                "js/content-script.js"
+                "js/content-script.js",
+                "js/html2canvas.js"
             ],
             "css": [
                 "css/custom.css"

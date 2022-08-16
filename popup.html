@@ -1,69 +1,69 @@
+<!DOCTYPE html>
+<html>
 
-	<!DOCTYPE html>
-	<html>
+<head>
+	<title>popup页</title>
+	<meta charset="utf-8" />
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<style>
+		html {
+			width: 200px
+		}
 
-	<head>
-		<title>popup页</title>
-		<meta charset="utf-8" />
-		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-		<style>
-			html {
-				width: 200px
-			}
+		.flex {
 
-			.flex {
+			display: grid;
+			grid-template-columns: repeat(1, 1fr);
 
-				display: grid;
-				grid-template-columns: repeat(1, 1fr);
+			align-content: center;
+			align-items: center;
 
-				align-content: center;
-				align-items: center;
+		}
 
-			}
+		.btn {
+			border-radius: 5px;
+			cursor: pointer;
+			width: 100px;
+			margin: 5px auto;
+			padding: 10px;
+			text-align: center;
+			font-size: 16px;
+			align-items: center;
+			color: #fff;
+			background: #09f;
+			border: none
+		}
 
-			.btn {
-				border-radius: 5px;
-				cursor: pointer;
-				width: 100px;
-				margin: 5px auto;
-				padding: 10px;
-				text-align: center;
-				font-size: 16px;
-				align-items: center;
-				color: #fff;
-				background: #09f;
-				border: none
-			}
+		.btn:hover {
+			background: #ffa805;
+		}
 
-			.btn:hover {
-				background: #ffa805;
-			}
+		.center {
+			text-align: center;
+			color: #cf2e2e;
+			padding: 10px;
+		}
+	</style>
+</head>
 
-			.center {
-				text-align: center;
-				color: #cf2e2e;
-				padding: 10px;
-			}
-		</style>
-	</head>
+<body>
 
-	<body>
-
-		<div class="center"><span>👻</span>点击按钮清除水印<span style="transform: rotate(-45deg);">👻</span></div>
-		<div class="flex">
-			<a class="btn" id="test">清除水印</a>
+	<div class="center"><span>👻</span>清除水印插件<span style="transform: rotate(-45deg);">👻</span></div>
 
 
-			<!-- 		<a class="btn" id="update_modal"></a><a class="btn" id="removewMask">创可贴水印</a>
-			<a class="btn" id="removewtsj" title="https://qiantu-ue.tusij.com/">图司机水印</a>
-			<a class="btn" id="removewtgs" title="https://818ps.com/">图怪兽水印</a>
-			<a class="btn" id="remove58pic" title="https://designer-ue.58pic.com/">千图网水印</a>
-			<a class="btn" id="remove51mo" title="https://www.51mo.com/">魔力设水印</a> -->
-		</div>
-		</div>
+	<div class="flex">
+		<button class="btn" id="test">清除水印</button>
+		<button class="btn" id="do">生成图片(内测中)</button>
+	</div>
+	</div>
 
-		<script type="text/javascript" src="js/jquery-1.8.3.js"></script>
-		<script type="text/javascript" src="js/popup.js"></script>
-	</body>
+	<script type="text/javascript" src="js/jquery-1.8.3.js"></script>
+	<script type="text/javascript" src="js/popup.js"></script>
+	<script type="text/javascript" src="js/html2canvas.js"></script>
 
-	</html>
+	<script>
+		console.log(html2canvas)
+	</script>
+</body>
+
+</html>
